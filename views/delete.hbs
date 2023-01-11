@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <form action="/removeemp">
+   <h3>Remove Employee</h3>
+    <hr>
+
+    <label for="empid"><b>Employee ID</b></label>
+    <input type="text" placeholder="type employee id to be searched" name="empid" id="empid" required>
+    <br><br>
+
+    {{#if mesg1}}
+    <h3>Data deleted!</h3>
+    {{/if}}
+
+     {{#if mesg2}}
+    <h3>Not found!</h3>
+    {{/if}}
+
+    <br><br>
+
+    <button type="submit" class="registerbtn">Remove</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="./" style="color:black">Back to home page</a>
+
+    <br>
+    </form>
+  </div>
+</body>
+</html>

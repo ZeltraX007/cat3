@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h3>Add employee</h3>
+        <p>add employee details</p>
+        <hr>
+        <form action="/addemp">
+            <label for="empid"><b>Employee ID</b></label>
+            <input type="text" placeholder="eg 2247212" name="empid" id="empid" required>
+            <br><br>
+            <label for="empname"><b>Name</b></label>
+            <input type="text" placeholder="Enter Your Name" name="empname" id="empname" required>
+            <br><br>
+            <label for="empdesig"><b>Designation</b></label>
+            <input type="text" placeholder="Enter Designation" name="empdesig" id="empdesig" required>
+            <br><br>
+            <label for="empdept"><b>Department</b></label>
+            <input type="text" placeholder="Enter Department" name="empdept" id="empdept" required>
+            <br><br>
+            <label for="empsalary"><b>Salary</b></label>
+            <input type="number" placeholder="Enter Salary" name="empsalary" id="empsalary" required>
+            <br><br>
+            <label for="emplocation"><b>City</b></label>
+            <input type="text" placeholder="Enter City" name="emplocation" id="emplocation" required>
+            <br><br>
+    
+            <button type="submit" class="registerbtn">ADD Employee</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+            
+            {{#if mesg}}
+            <h3>Data Inserted</h3>
+            {{/if}}
+
+            {{#if checkmesg}}
+            <h3>Emailid or Phoneno already present!</h3>
+            {{/if}}
+        </form>
+    </div>
+    
+</body>
+</html>

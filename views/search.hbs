@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <form action="/searchemp"  >
+   <h3>SEARCH Employee</h3>
+    <hr>
+
+    <label for="empdept"><b>Search by Department</b></label>
+    <input type="text" placeholder="type department to be searched" name="empdept" id="empdept">
+    <br><br>
+
+    <label for="empsalary"><b>Search By Salary</b></label>
+    <input type="number" placeholder="type salary to be searched" name="empsalary" id="empsalary">
+    <br><br>
+
+    {{#if mesg1}}
+     <h3>Data Found!</h3>
+     <table>
+        <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Location</th>
+        </tr></thead>
+        <tbody>
+        {{#data}}
+        <tr>
+            <td>{{empid}}</td>
+            <td>{{empname}}</td>
+            <td>{{empdesig}}</td>
+            <td>{{empdept}}</td>
+            <td>{{empsalary}}</td>
+            <td>{{emplocation}}</td>
+        </tr>
+        {{/data}}
+        </tbody>
+    </table>
+     {{/if}}
+    {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+     <br><br>
+
+    <button type="submit" class="registerbtn">SEACRH CANDIDATE</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+
+    <br>
+    </form>
+  </div>
+  <hr>
+</body>
+</html>
